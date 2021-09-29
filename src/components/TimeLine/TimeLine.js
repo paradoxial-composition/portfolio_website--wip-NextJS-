@@ -47,6 +47,8 @@ const Timeline = () => {
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
         {AboutMe}
+        <br />
+        Hobbies include music of course (bass player), a bit of gaming and DIY dreamcatchers.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
