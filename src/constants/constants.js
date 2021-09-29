@@ -37,10 +37,16 @@ export const projects = [
   },
 ];
 
+export const AboutMe = `I first encoutered ES6 and the existense of frameworks like reactjs and vuejs in 2018 and was astonished by the fluidity and the simplicity of its code,
+and the projetc potential it has with that low learning curb, i was able to familiarise my self a bit with ract and vue and managed to get my first internship
+to what i wanted to build my career on, thanks to my fast learning and adaptive skills I didn´t find any issues while merging with the team, and was even put on the team
+that was working on the biggest project the agency had at that time. From then, my journey as an avide JS web developper began, looking for cool new stuff to experiment with
+and intresting projects to build.`
+
 export const TimeLineData = [
   { year: 2017, text: 'Started my journey', },
-  { year: 2018, text: 'Worked as a freelance developer', },
-  { year: 2019, text: 'Founded JavaScript Mastery', },
-  { year: 2020, text: 'Shared my projects with the world', },
-  { year: 2021, text: 'Started my own platform', },
+  { year: 2018, text: 'Interned at Innoveos', },
+  { year: 2019, text: 'Started working at Pyxicom', },
+  { year: 2020, text: 'Finished my first big project with VueJs', },
+  { year: 2021, text: 'Created my portfolio website along other small projects', },
 ];
