@@ -120,7 +120,9 @@ export const ExternalLinks = styled.a`
   font-weight: bold;
   background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%); /* Matching gradient buttons */
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  width: 40%;
+  text-align: center;
+  border-radius: 8px;
   transition: transform 0.5s ease-in-out;
   &:hover {
     transform: scale(1.1);
