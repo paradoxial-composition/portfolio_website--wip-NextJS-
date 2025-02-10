@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
     "next": "10.2.3",
     "npm-api": "^1.0.1",
     "react": "17.0.2",

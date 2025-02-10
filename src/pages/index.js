@@ -8,6 +8,7 @@ import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 import BackToTop from '../components/BackToTop/BackToTop'
 import { projects, packages } from "../constants/constants";
+import { Analytics } from "@vercel/analytics/react"
 
 const Home = ( {data}) => {
   return (
@@ -22,6 +23,7 @@ const Home = ( {data}) => {
       <Technologies />
       <Timeline />
       <Acomplishments data={data} />
+      <Analytics />
     </Layout>
   );
 };
