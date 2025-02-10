@@ -1,0 +1,26 @@
+Postman does a call on a URL with a method, (POST, GET, PUT etc)
+the URL will lead to a server where the project is hosted and run,
+in the running project, for example celine-svc-users we will have a controller for each url, method and version combination
+a controller is just a javascript Class with functions and properties
+for example GET /v1/users/info
+celine-svc-users  will have a controller that is listening to a users/info call with GET method  and version 1
+This controller will execute some logic, for example verifying the parameters in the url path, and will call a service with the path params as parameters of needed,
+
+a service is also a javascript class, that will organize and orchestrate different component calls to answer to the endpoint's need,
+for example in v1/users/info we will need to fetch data from the data base and map it or execute some logic on it, this is done in the service
+
+Like we said, the service will call a Repostory to fetch the data, and a Mapper to map this data and prepare it to be sent back to the front,
+
+A repository is a javascript Module, in which we handel database calls, in our case salesforce calls and requests, this module will be called by the service with propper parameters like UserID for example and its only job is to fetch data from the datasource and send it back to the service.
+
+A Mapper is a javascript module, in which we handle data mapping and formating, this module will be called by the the service with the response of the repository as a parameter, it will take this response and format it to be presentable and consumable by the front, and will return it to the service.
+
+The service after calling the repository, the mapper, and what ever additional logic needed will return a json object to the controller, who then will return this response to the front as the endpoint response that we see in postman.
+
+LVMH additional settings,
+For lvmh there are additional components that we need to keep in mind, like the api contracts, these are a set of validations applied to the the path parameters and the response of the endpoint
+
+app.config:
+sometimes we dont need to implement the whole cycle, we only need to override a repository for example, we will then create this repository and add it to the configuration on app.config, the ISC logic will handle the replacement of their repository with ours.
+
+Even if we implement the whole cycle we will need to mention our controller, service, repository and mapper in app.config to replace ISC's logic

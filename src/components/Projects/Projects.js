@@ -1,38 +1,64 @@
-import React from 'react';
+import React, { useState } from "react";
+import { 
+  Section,
+  BlogCard,
+  Img,
+  TitleContent,
+  HeaderThree,
+  Hr,
+  CardInfo,
+  TagList,
+  Tag,
+  UtilityList,
+  ExternalLinks,
+  GridContainer,
+  ContentContainer
+ } from "./styleComponents";
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
 
-const Projects = () => (
-  <Section nopadding id="projects">
-    <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
-    <GridContainer>
-      {projects.map( ({id, image, title, description, tags, source, visit}) => (
-        <BlogCard key={id}>
-          <Img src={image}/>
-          <TitleContent>
-            <HeaderThree title>{title}</HeaderThree>
-            <Hr />
-          </TitleContent>
-          <CardInfo>{description}</CardInfo>
-          <div>
-            <TitleContent>Stack</TitleContent>
-            <TagList>
-              {tags.map((tag, i) => (
-                <Tag key={i}>{tag}</Tag>
-              ))}
-            </TagList>
-          </div>
-          <UtilityList>
-            <ExternalLinks href={visit}>Code</ExternalLinks>
-            <ExternalLinks href={source}>Source</ExternalLinks>
-          </UtilityList>
-        </BlogCard>
-      ))}
-    </GridContainer>
-  </Section>
-);
+const Projects = ({title, projects = []}) => {
+  const [activeId, setActiveId] = useState(null);
+
+  return (
+    <Section id="projects">
+      <h2 style={{ color: "hsl(204, 23.8%, 95.9%)", textAlign: "center", fontSize: "2.5rem", marginBottom: "2rem" }}>
+        {title}
+      </h2>
+      <GridContainer>
+        {projects.map(({ id, image, title, description, tags, source, visit }) => (
+          <BlogCard key={id} open={activeId === id}>
+            <TitleContent onClick={() => setActiveId(activeId === id ? null : id)}>
+              <HeaderThree>{title}</HeaderThree>
+            </TitleContent>
+
+            <ContentContainer key={id} open={activeId === id}>
+              <Img src={image} alt={title} />
+              <CardInfo>{description}</CardInfo>
+              <div>
+                <TitleContent>
+                  <HeaderThree>Stack</HeaderThree>
+                  <Hr />
+                </TitleContent>
+                <TagList>
+                  {tags.map((tag, i) => (
+                    <Tag key={i}>{tag}</Tag>
+                  ))}
+                </TagList>
+              </div>
+              <UtilityList>
+                <ExternalLinks href={visit} target="_blank" rel="noopener noreferrer">
+                  Visit
+                </ExternalLinks>
+                <ExternalLinks href={source} target="_blank" rel="noopener noreferrer">
+                  Source
+                </ExternalLinks>
+              </UtilityList>
+            </ContentContainer>
+          </BlogCard>
+        ))}
+      </GridContainer>
+    </Section>
+  );
+};
 
 export default Projects;

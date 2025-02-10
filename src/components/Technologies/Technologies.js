@@ -10,7 +10,7 @@ const Technologies = () =>  (
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
       I ve worked with a range of technologies in the web development world.
-      From Back-end to Design.
+      From Back-end oriented frameworks like ExpressJs and NestJs to Front-end ones line ReactJS and VueJs.
     </SectionText>
     <List>
       <ListItem>
@@ -19,7 +19,7 @@ const Technologies = () =>  (
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
               Experience with <br />
-              React.js, Vue.js, Angular.js, next.js
+              React.js, React Native, Vue.js and Next.js
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -29,7 +29,7 @@ const Technologies = () =>  (
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
               Experience with <br />
-              Node.js and Databases
+              Node, ExpressJs and NestJs
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -39,7 +39,7 @@ const Technologies = () =>  (
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
               Experience with <br />
-              Bootstrap, AntD, MaterialUI
+              Bootstrap, AntD, MaterialUI, Tailwind and different client design systems like Bouygue Telecom's trinity and Nespresso's
           </ListParagraph>
         </ListContainer>
       </ListItem>

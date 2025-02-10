@@ -6,18 +6,22 @@ import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
+import BackToTop from '../components/BackToTop/BackToTop'
+import { projects, packages } from "../constants/constants";
 
-const Home = () => {
+const Home = ( {data}) => {
   return (
     <Layout>
+      <BackToTop/>
       <Section grid>
         <Hero />
         <BgAnimation />
       </Section>
-      <Projects />
+      <Projects title="Projects" projects={projects}/>
+      <Projects title="Packages" projects={packages}/>
       <Technologies />
       <Timeline />
-      <Acomplishments />
+      <Acomplishments data={data} />
     </Layout>
   );
 };

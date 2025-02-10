@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
@@ -32,14 +32,17 @@ const Header = () =>  (
       </li>
     </Div2>
     <Div3>
-      <SocialIcons href="https://github.com">
-        <AiFillGithub size="3rem" />
+      <SocialIcons href="https://github.com/paradoxial-composition" target="_blank" rel="noopener noreferrer">
+        <AiFillGithub size="3rem"/>
       </SocialIcons>
-      <SocialIcons href="https://linkedin.com">
+      <SocialIcons href="https://www.linkedin.com/in/othman-el-bani-701b41176/" target="_blank" rel="noopener noreferrer">
         <AiFillLinkedin size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://instagram.com">
+      <SocialIcons href="https://www.instagram.com/oto_otoman?igsh=dG02NWttcmR6d2g2" target="_blank" rel="noopener noreferrer">
         <AiFillInstagram size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://x.com/emptyKing_?t=12T03W1obV_Xx3hhTSlQZA&s=08" target="_blank" rel="noopener noreferrer">
+        <AiFillTwitterCircle size="3rem" />
       </SocialIcons>
     </Div3>
   </Container>

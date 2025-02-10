@@ -8,7 +8,7 @@ export const Layout = ({children}) => {
   return (
     <Container>
      <Header/>
-     <main>{children}</main> 
+      <main>{children}</main> 
      <Footer/>
     </Container>
   )
