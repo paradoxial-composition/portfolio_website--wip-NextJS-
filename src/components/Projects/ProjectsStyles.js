@@ -1,112 +1,154 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  overflow: hidden;
-`
+// Section Styles
+export const Section = styled.section`
+  background: #0e1624;
+  padding: 4rem 0;
+`;
 
-export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
-@media ${(props) => props.theme.breakpoints.sm} {
+// Image Styles
+export const Img = styled.img`
+  width: 100%;
+  padding-top: 20px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+`;
+
+// BlogCard Styles
+export const BlogCard = styled.div`
+  max-height: ${(props) => (props.open ? "1000px" : "0")};
+  min-height: 50px;
+  background: #182233;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
-}
+  justify-content: center;
+  align-items: center;
 
-`
-export const BlogCard = styled.div`
-  border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
-  text-align: center;
-  width: 400px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  & > * {
+    margin: 0;
   }
 `;
+
+// TitleContent Styles
 export const TitleContent = styled.div`
+
+  padding: 1rem;
   text-align: center;
-  z-index: 20;
-  width: 100%;
 
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
+// Content Container for Smooth Animation
+export const ContentContainer = styled.div`
+  max-height: ${(props) => (props.open ? "1000px" : "0")};
+  overflow: hidden;
+  padding-bottom: ${(props) => (props.open ? "1rem" : "0")};
+  transition: 0.5s ease-out;
+`;
 
+// HeaderThree Styles (Title)
 export const HeaderThree = styled.h3`
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  font-size: 1.5rem;
+  margin: 0;
+  color: hsl(204, 23.8%, 95.9%);
 `;
 
+// Horizontal Rule Styles
 export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
-  border: 0;
-  background: #d0bb57;
+  border: none;
+  height: 1px;
+  background: #44506a;
+  margin: 1rem 0;
 `;
 
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`;
-
-
+// CardInfo Styles (Description)
 export const CardInfo = styled.p`
-  width: 100%;
-  padding: 0 50px;
-  color: #e4e6e7;
-  font-style: 2rem;
-  line-height: 24px;
-  text-align: justify;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
-  
-}
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #bdc3c7;
 `;
 
+// TagList Styles
+export const TagList = styled.ul`
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 75px;
+`;
 
+// Tag Styles
+export const Tag = styled.li`
+  background: transparent;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid #13ADC7;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  }
+`;
+
+// UtilityList Styles
 export const UtilityList = styled.ul`
-  list-style-type: none;
-  padding: 0;
   display: flex;
   justify-content: space-around;
-  margin: 2.5rem 0;
+  padding: 1rem;
+  margin: 0;
 `;
 
+// ExternalLinks Styles (Buttons)
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  padding: 0.5rem 1rem;
+  width: 40%;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
-export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-`
-export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-`
+// GridContainer Styles
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+`;
+
+
+// Arrow Icon for Accordion Toggle
+export const ArrowIcon = styled.span`
+  font-size: 1.2rem;
+  transition: transform 0.5s ease;
+  color: #bdc3c7;
+
+  ${(props) => props.open && `transform: rotate(90deg);`}
+`;

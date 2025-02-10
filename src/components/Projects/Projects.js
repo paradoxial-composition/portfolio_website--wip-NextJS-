@@ -13,7 +13,7 @@ import {
   ExternalLinks,
   GridContainer,
   ContentContainer
- } from "./styleComponents";
+ } from "./ProjectsStyles";
 
 
 const Projects = ({title, projects = []}) => {
