@@ -9,6 +9,7 @@ export const Section = styled.section`
 // Image Styles
 export const Img = styled.img`
   width: 100%;
+  padding-top: 20px;
   height: 200px;
   object-fit: contain;
   border-radius: 10px;
@@ -40,6 +41,7 @@ export const BlogCard = styled.div`
 
 // TitleContent Styles
 export const TitleContent = styled.div`
+
   padding: 1rem;
   text-align: center;
 `;
