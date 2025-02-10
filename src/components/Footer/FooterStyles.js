@@ -1,16 +1,27 @@
 import styled from "styled-components"
 
 export const FooterWrapper = styled.section`
-	width: calc(100vw - 96px);
+  width: calc(100vw - 96px);
   max-width: 1040px;
   padding: 2rem 48px 40px;
   margin: 1rem auto;
   box-sizing: content-box;
+  display: grid;
+  grid-template-areas: 
+	"a a a"
+	"b c c";
 
 
   @media ${props => props.theme.breakpoints.sm} {
     padding: 0 16px 48px;
     width: calc(100vw - 32px);
+	display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+	    grid-template-areas: 
+			"a a a"
+            "b b b"
+			"c c c";
   }
 `
 
@@ -22,6 +33,7 @@ export const LinkItem = styled.a`
 	transition: .3s ease;
 	position: relative;
 	left: 0;
+	grid-area: a;
 
 	&:hover {
 		color: #fff;
@@ -47,16 +59,10 @@ export const SocialIconsContainer = styled.div`
 max-width: 1040px;
 display: flex;
 justify-content: space-between;
-
-@media ${props => props.theme.breakpoints.md}{
-  display: flex;
-  justify-content: space-between;
-}
+grid-area: c;
 
 @media ${props => props.theme.breakpoints.sm}{
-  display: flex;
-	width: 100%;
-  flex-direction: column;
+  justify-content: space-around;
 }
 `
 
@@ -65,6 +71,7 @@ export const CompanyContainer = styled.div`
 	align-items:baseline;
 	flex-wrap: wrap;
 	margin-right: auto;
+	grid-area: b;
 	
 
 	@media ${props => props.theme.breakpoints.md}{

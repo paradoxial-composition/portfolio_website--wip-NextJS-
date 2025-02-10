@@ -19,10 +19,10 @@ const Footer = () => {
           </LinkItem>
         </LinkColumn>
       </LinkList>
+      <CompanyContainer>
+        <Slogan>Building one project at a time.</Slogan>
+      </CompanyContainer>
       <SocialIconsContainer>
-        <CompanyContainer>
-          <Slogan>Building one project at a time.</Slogan>
-        </CompanyContainer>
         <SocialIcons href="https://github.com/paradoxial-composition">
           <AiFillGithub size="3rem" />
         </SocialIcons>

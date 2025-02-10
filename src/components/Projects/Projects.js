@@ -46,12 +46,12 @@ const Projects = ({title, projects = []}) => {
                 </TagList>
               </div>
               <UtilityList>
-                <ExternalLinks href={visit} target="_blank" rel="noopener noreferrer">
+                {visit && <ExternalLinks href={visit} target="_blank" rel="noopener noreferrer">
                   Visit
-                </ExternalLinks>
-                <ExternalLinks href={source} target="_blank" rel="noopener noreferrer">
+                </ExternalLinks>}
+                {source && <ExternalLinks href={source} target="_blank" rel="noopener noreferrer">
                   Source
-                </ExternalLinks>
+                </ExternalLinks>}
               </UtilityList>
             </ContentContainer>
           </BlogCard>
